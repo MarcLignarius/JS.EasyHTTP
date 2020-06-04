@@ -5,7 +5,7 @@ http.get('https://jsonplaceholder.typicode.com/posts', function (err, posts) {
   if (err) {
     console.log(err);
   } else {
-    console.log(posts);
+    console.log('GET', posts);
   }
 });
 
@@ -14,7 +14,7 @@ http.get('https://jsonplaceholder.typicode.com/posts/1', function (err, post) {
   if (err) {
     console.log(err);
   } else {
-    console.log(post);
+    console.log('GET', post);
   }
 });
 
@@ -32,7 +32,7 @@ http.post('https://jsonplaceholder.typicode.com/posts', data, function (
   if (err) {
     console.log(err);
   } else {
-    console.log(post);
+    console.log('POST', post);
   }
 });
 
@@ -44,7 +44,7 @@ http.put('https://jsonplaceholder.typicode.com/posts/1', data, function (
   if (err) {
     console.log(err);
   } else {
-    console.log(post);
+    console.log('PUT', post);
   }
 });
 
@@ -56,6 +56,6 @@ http.delete('https://jsonplaceholder.typicode.com/posts/1', function (
   if (err) {
     console.log(err);
   } else {
-    console.log(response);
+    console.log('DELETE', response);
   }
 });
